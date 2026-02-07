@@ -1,27 +1,19 @@
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Random;
 
-public class AdivinarNumero {
-
+public class AdivinaNumero {
     public static void main(String[] args) {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
         int numeroSecreto = random.nextInt(10) + 1;
-        int intento = 0;
+        System.out.print("Adivina un número del 1 al 10: ");
+        int intento = scanner.nextInt();
 
-        while (intento != numeroSecreto) {
-            System.out.print("Adivina el número (1-10): ");
-            intento = scanner.nextInt();
-
-            if (intento < numeroSecreto) {
-                System.out.println("Demasiado bajo");
-            } else if (intento > numeroSecreto) {
-                System.out.println("Demasiado alto");
-            }
+        if (intento == numeroSecreto) {
+            System.out.println("¡Has acertado!");
+        } else {
+            System.out.println("No es correcto. El número era " + numeroSecreto);
         }
-
-        System.out.println("¡Correcto! Has adivinado el número.");
-        scanner.close();
     }
 }
