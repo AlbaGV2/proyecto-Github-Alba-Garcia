@@ -19,7 +19,7 @@ public class AdivinaNumero {
 
         //Si el numero se ha acertado
         if (intento == numeroSecreto) {
-            System.out.println("Genial!! Has acertado :)!");
+            System.out.println("Genial!! Has acertado! Gracias por jugar!:)!");
         //Si no se ha acertado
         } else {
             System.out.println("Ohhh! El numero no es correcto...");
@@ -33,6 +33,7 @@ public class AdivinaNumero {
             //Validar numero de intentos.
             if (intento < intentosMinimos || intento > numMaxIntentos) {
                 System.out.println("Numero fuera de rango");
+                System.out.println("Introduce un numero del 1 al 10");
                 return;
         }
     }
