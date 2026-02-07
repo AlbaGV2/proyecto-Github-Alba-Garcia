@@ -24,6 +24,7 @@ public class AdivinaNumero {
         } else {
             System.out.println("Ohhh! El numero no es correcto...");
             System.out.println("El numero correcto era: " + numeroSecreto);
+            System.out.println("Prueba de nuevo!");
         }    
             //Cierre de scanner
             scanner.close();
