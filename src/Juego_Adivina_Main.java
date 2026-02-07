@@ -7,13 +7,14 @@ public class AdivinaNumero {
         Scanner scanner = new Scanner(System.in);
 
         int numeroSecreto = random.nextInt(10) + 1;
-        System.out.print("Adivina un número del 1 al 10: ");
+        System.out.print("Adivina un numero del 1 al 10 RAPIDO!: ");
         int intento = scanner.nextInt();
 
         if (intento == numeroSecreto) {
-            System.out.println("¡Has acertado!");
+            System.out.println("Genial!! Has acertado :)!");
         } else {
-            System.out.println("No es correcto. El número era " + numeroSecreto);
+            System.out.println("Ohhh! El numero no es correcto...);
+            System.out.println("El numero correcto era: " + numeroSecreto);
         }
     }
 }
