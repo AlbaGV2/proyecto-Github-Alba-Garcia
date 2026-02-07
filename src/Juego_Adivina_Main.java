@@ -7,24 +7,33 @@ public class AdivinaNumero {
         Scanner scanner = new Scanner(System.in);
 
         int numeroSecreto = random.nextInt(10) + 1;
-        System.out.print("Adivina un numero del 1 al 10 RAPIDO!: ");
+        System.out.print("RAPIDO! Adivina un numero del 1 al 10: ");
         int intento = scanner.nextInt();
 
-        //Validar numero de intentos.
-        if (intento < 1 || intento > 10) {
-            System.out.println("Numero fuera de rango");
-            return;
+        //variables
+        int maxIntentos = 10;
+        int intentosMinimos = 1;
+
+
+       validarEntrada(intento, maxIntentos, intentosMinimos);
 
         //Si el numero se ha acertado
         if (intento == numeroSecreto) {
             System.out.println("Genial!! Has acertado :)!");
         //Si no se ha acertado
         } else {
-            System.out.println("Ohhh! El numero no es correcto...);
+            System.out.println("Ohhh! El numero no es correcto...");
             System.out.println("El numero correcto era: " + numeroSecreto);
         }    
             //Cierre de scanner
             scanner.close();
+        }
+
+        public static void validarEntrada(int intento, int maxIntentos, int intentosMinimos){
+            //Validar numero de intentos.
+            if (intento < intentosMinimos || intento > numMaxIntentos) {
+                System.out.println("Numero fuera de rango");
+                return;
         }
     }
         
